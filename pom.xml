@@ -144,45 +144,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>${maven-pmd-plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.baeldung.pmd</groupId>
-                        <artifactId>custom-pmd</artifactId>
-                        <version>${custom-pmd.version}</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <failurePriority>5</failurePriority>
-                    <aggregate>false</aggregate>
-                    <failOnViolation>true</failOnViolation>
-                    <verbose>true</verbose>
-                    <linkXRef>true</linkXRef>
-                    <includeTests>true</includeTests>
-                    <sourceEncoding>UTF-8</sourceEncoding>
-                    <targetJdk>${java.version}</targetJdk>
-                    <rulesets>
-                        <ruleset>${tutorialsproject.basedir}/baeldung-pmd-rules.xml</ruleset>
-                    </rulesets>
-                    <excludeRoots>
-                        <excludeRoot>target/generated-sources</excludeRoot>
-                    </excludeRoots>
-                    <excludeRoots>
-                        <excludeRoot>src/main</excludeRoot>
-                    </excludeRoots>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.commonjava.maven.plugins</groupId>
                 <artifactId>directory-maven-plugin</artifactId>
                 <version>${directory-maven-plugin.version}</version>
